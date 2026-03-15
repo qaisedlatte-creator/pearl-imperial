@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pearl Imperial General Trading LLC — Dubai, UAE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --white:#FFFFFF;
+  --off:#F8F9FC;
+  --off2:#F0F3F8;
+  --blue:#1B4FD8;
+  --blue2:#2D63F5;
+  --blue-light:#EEF2FF;
+  --blue-mid:#C7D4FB;
+  --navy:#0A1A4A;
+  --text:#0F1C3F;
+  --muted:#6B7A9A;
+  --border:#E4E9F5;
+  --border2:#D0D8EE;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 5rem;height:66px;backdrop-filter:blur(12px);}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-mark{width:32px;height:32px;background:var(--blue);display:flex;align-items:center;justify-content:center;}
+.nav-mark span{color:white;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;line-height:1;}
+.nav-name{display:flex;flex-direction:column;gap:1px;}
+.nav-name-main{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy);letter-spacing:0.04em;line-height:1.1;}
+.nav-name-sub{font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);}
+nav ul{list-style:none;display:flex;gap:2.2rem;}
+nav a{color:var(--muted);text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;transition:color 0.2s;font-weight:400;}
+nav a:hover{color:var(--blue);}
+.nav-cta{background:var(--blue);color:white;padding:0.5rem 1.4rem;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-decoration:none;transition:all 0.2s;font-family:'Jost',sans-serif;}
+.nav-cta:hover{background:var(--blue2);}
+
+/* HERO */
+.hero{min-height:100vh;padding-top:66px;display:grid;grid-template-columns:1fr 1fr;align-items:center;overflow:hidden;}
+.hero-left{padding:5rem 4rem 5rem 5rem;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--blue-light);border:1px solid var(--blue-mid);color:var(--blue);padding:0.35rem 1rem;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;margin-bottom:2rem;}
+.hero-tag-dot{width:5px;height:5px;background:var(--blue);border-radius:50%;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,4.5vw,4rem);font-weight:300;line-height:1.1;color:var(--navy);margin-bottom:1.5rem;}
+.hero-title strong{font-weight:700;display:block;}
+.hero-title em{font-style:italic;color:var(--blue);}
+.hero-body{color:var(--muted);font-size:0.95rem;line-height:1.9;max-width:460px;margin-bottom:2.5rem;}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:4rem;}
+.btn-blue{background:var(--blue);color:white;padding:0.85rem 2.2rem;font-family:'Jost',sans-serif;font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;display:inline-block;}
+.btn-blue:hover{background:var(--blue2);transform:translateY(-1px);}
+.btn-line{background:transparent;color:var(--blue);border:1.5px solid var(--blue);padding:0.85rem 2.2rem;font-family:'Jost',sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;display:inline-block;font-weight:400;}
+.btn-line:hover{background:var(--blue-light);}
+.hero-stats{display:flex;gap:0;border-top:1px solid var(--border);}
+.hero-stat{padding:1.2rem 2rem 1.2rem 0;margin-right:2rem;border-right:1px solid var(--border);}
+.hero-stat:last-child{border-right:none;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--navy);line-height:1;}
+.stat-lbl{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+
+/* HERO RIGHT */
+.hero-right{background:var(--off);border-left:1px solid var(--border);height:100%;display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem;}
+.hero-card{background:white;border:1px solid var(--border);padding:2rem;margin-bottom:1px;}
+.hero-card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;}
+.hero-card-title{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);}
+.hero-card-badge{background:var(--blue-light);color:var(--blue);font-size:0.65rem;letter-spacing:0.1em;padding:0.2rem 0.7rem;font-weight:500;}
+.entity-list{display:flex;flex-direction:column;gap:0.8rem;}
+.entity-row{display:flex;align-items:center;gap:1rem;padding:0.8rem;background:var(--off);border:1px solid var(--border);}
+.entity-flag{font-size:1.2rem;width:32px;text-align:center;flex-shrink:0;}
+.entity-info{}
+.entity-name{font-size:0.85rem;font-weight:500;color:var(--navy);}
+.entity-loc{font-size:0.72rem;color:var(--muted);}
+.hero-products{margin-top:1px;background:white;border:1px solid var(--border);padding:2rem;}
+.hero-prod-title{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem;}
+.prod-tags{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.prod-tag{background:var(--blue-light);color:var(--blue);font-size:0.72rem;padding:0.3rem 0.8rem;letter-spacing:0.05em;border:1px solid var(--blue-mid);}
+
+/* MARQUEE */
+.marquee-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0.85rem 0;overflow:hidden;background:var(--off);}
+.marquee-track{display:flex;animation:marquee 25s linear infinite;white-space:nowrap;}
+.m-item{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);padding:0 2rem;}
+.m-dot{color:var(--blue);font-size:0.5rem;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* SECTION COMMONS */
+.sec-tag{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:0.8rem;display:block;}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:var(--navy);line-height:1.15;margin-bottom:1rem;}
+.sec-title strong{font-weight:700;}
+.sec-title em{font-style:italic;color:var(--blue);}
+.sec-body{color:var(--muted);font-size:0.92rem;line-height:1.9;}
+
+/* ABOUT */
+.about{padding:7rem 5rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;max-width:1320px;margin:0 auto;}
+.about-body p{margin-bottom:1rem;}
+.about-body{margin-bottom:2rem;}
+.pillars{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);}
+.pillar{display:flex;gap:1.5rem;padding:1.5rem;border-bottom:1px solid var(--border);align-items:flex-start;transition:background 0.2s;}
+.pillar:last-child{border-bottom:none;}
+.pillar:hover{background:var(--blue-light);}
+.pillar-icon{width:36px;height:36px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.pillar-icon span{color:white;font-size:0.75rem;font-weight:600;letter-spacing:0.05em;}
+.pillar-name{font-size:0.9rem;font-weight:500;color:var(--navy);margin-bottom:0.3rem;}
+.pillar-desc{font-size:0.82rem;color:var(--muted);line-height:1.7;}
+.presence{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:1px;}
+.pres-item{background:white;padding:1.2rem;text-align:center;}
+.pres-flag{font-size:1.3rem;margin-bottom:4px;}
+.pres-name{font-size:0.8rem;font-weight:500;color:var(--navy);}
+.pres-role{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:2px;}
+
+/* PRODUCTS */
+.products{padding:6rem 5rem;background:var(--off);}
+.products-inner{max-width:1320px;margin:0 auto;}
+.prod-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3.5rem;flex-wrap:wrap;gap:2rem;}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);}
+.product-card{background:white;padding:2.2rem;transition:all 0.25s;border-bottom:2px solid transparent;}
+.product-card:hover{border-bottom-color:var(--blue);transform:translateY(-2px);box-shadow:0 8px 32px rgba(27,79,216,0.08);}
+.prod-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--border2);font-weight:300;line-height:1;margin-bottom:1rem;}
+.prod-name{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--navy);margin-bottom:0.4rem;}
+.prod-origin{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue);margin-bottom:0.8rem;font-weight:500;}
+.prod-desc{font-size:0.83rem;color:var(--muted);line-height:1.75;}
+.prod-pill{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:0.62rem;letter-spacing:0.1em;padding:0.25rem 0.7rem;margin-top:1rem;border:1px solid var(--blue-mid);font-weight:500;}
+
+/* HOW WE WORK */
+.how{padding:7rem 5rem;max-width:1320px;margin:0 auto;}
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:3.5rem;}
+.how-card{background:white;padding:2rem;transition:background 0.2s;}
+.how-card:hover{background:var(--blue-light);}
+.how-num{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--border2);font-weight:300;line-height:1;margin-bottom:1.2rem;}
+.how-title{font-size:0.92rem;font-weight:600;color:var(--navy);margin-bottom:0.6rem;letter-spacing:0.02em;}
+.how-body{font-size:0.8rem;color:var(--muted);line-height:1.8;}
+
+/* MARKETS */
+.markets{background:var(--navy);padding:5rem;}
+.markets-inner{max-width:1320px;margin:0 auto;}
+.markets .sec-tag{color:#7A9BF5;}
+.markets .sec-title{color:white;}
+.markets-row{display:flex;gap:1px;background:rgba(255,255,255,0.08);margin-top:3rem;flex-wrap:wrap;}
+.mkt-item{background:var(--navy);padding:2.2rem 2.5rem;flex:1;min-width:150px;transition:background 0.2s;border-bottom:2px solid transparent;}
+.mkt-item:hover{background:#0F2360;border-bottom-color:#7A9BF5;}
+.mkt-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:white;margin-bottom:4px;}
+.mkt-role{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:#7A9BF5;}
+
+/* CONTACT */
+.contact{padding:7rem 5rem;}
+.contact-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start;}
+.contact-info{display:flex;flex-direction:column;gap:0;}
+.cinfo-item{padding:1.8rem 0;border-bottom:1px solid var(--border);}
+.cinfo-item:first-child{padding-top:0;}
+.cinfo-label{font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:0.5rem;}
+.cinfo-val{font-size:0.9rem;color:var(--text);line-height:1.8;}
+.cinfo-val a{color:var(--blue);text-decoration:none;}
+.cinfo-val a:hover{text-decoration:underline;}
+.entity-chips{display:flex;flex-direction:column;gap:0.5rem;margin-top:0.5rem;}
+.entity-chip{display:flex;align-items:center;gap:0.7rem;font-size:0.82rem;color:var(--muted);}
+.entity-chip-dot{width:6px;height:6px;background:var(--blue);border-radius:50%;flex-shrink:0;}
+.cform{background:var(--off);border:1px solid var(--border);padding:2.5rem;}
+.cform-title{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:2rem;}
+.fg{margin-bottom:1rem;}
+.fg label{display:block;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;font-weight:400;}
+.fg input,.fg select,.fg textarea{width:100%;background:white;border:1px solid var(--border);color:var(--text);padding:0.75rem 1rem;font-family:'Jost',sans-serif;font-size:0.88rem;font-weight:300;outline:none;transition:border-color 0.2s;-webkit-appearance:none;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);}
+.fg select option{background:white;}
+.fg textarea{resize:vertical;min-height:90px;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.fsub{width:100%;background:var(--blue);color:white;border:none;padding:0.95rem;font-family:'Jost',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;transition:background 0.2s;margin-top:0.5rem;}
+.fsub:hover{background:var(--blue2);}
+
+/* FOOTER */
+footer{background:var(--off);border-top:1px solid var(--border);padding:2.5rem 5rem;}
+.foot-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
+.foot-brand{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy);}
+.foot-brand span{display:block;font-family:'Jost',sans-serif;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-top:2px;font-weight:300;}
+.foot-links{display:flex;gap:2rem;}
+.foot-links a{color:var(--muted);text-decoration:none;font-size:0.72rem;letter-spacing:0.08em;transition:color 0.2s;}
+.foot-links a:hover{color:var(--blue);}
+.foot-copy{font-size:0.65rem;color:#B0B8CC;}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.hero-tag{animation:fadeUp 0.6s 0.1s both;}
+.hero-title{animation:fadeUp 0.7s 0.25s both;}
+.hero-body{animation:fadeUp 0.7s 0.4s both;}
+.hero-actions{animation:fadeUp 0.7s 0.5s both;}
+.hero-stats{animation:fadeUp 0.7s 0.6s both;}
+.hero-right{animation:fadeUp 0.8s 0.3s both;}
+
+@media(max-width:960px){
+  nav{padding:0 1.5rem;}nav ul{display:none;}
+  .hero{grid-template-columns:1fr;padding-top:66px;}
+  .hero-left{padding:3rem 1.5rem 2rem;}
+  .hero-right{padding:2rem 1.5rem 3rem;border-left:none;border-top:1px solid var(--border);}
+  .about,.contact-inner{grid-template-columns:1fr;gap:3rem;padding:4rem 1.5rem;}
+  .products{padding:4rem 1.5rem;}
+  .products-grid{grid-template-columns:1fr 1fr;}
+  .how{padding:4rem 1.5rem;}
+  .how-grid{grid-template-columns:1fr 1fr;}
+  .markets{padding:4rem 1.5rem;}
+  .contact{padding:4rem 1.5rem;}
+  footer{padding:2rem 1.5rem;}
+}
+@media(max-width:600px){
+  .products-grid,.how-grid,.frow{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-mark"><span>PI</span></div>
+    <div class="nav-name">
+      <div class="nav-name-main">Pearl Imperial</div>
+      <div class="nav-name-sub">General Trading LLC · Dubai</div>
+    </div>
+  </a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#how">Operations</a></li>
+    <li><a href="#markets">Markets</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Trade Enquiry</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag"><div class="hero-tag-dot"></div>Dubai, UAE · Est. 2020</div>
+    <h1 class="hero-title">
+      Global Trade.<br/>
+      <strong>Premium Quality.</strong>
+      <em>Delivered.</em>
+    </h1>
+    <p class="hero-body">Pearl Imperial General Trading LLC connects producers and buyers across the Middle East and India — specialising in premium nuts, dry fruits, spices, rice, and coffee through ethical sourcing and reliable supply chains.</p>
+    <div class="hero-actions">
+      <a href="#products" class="btn-blue">Our Products</a>
+      <a href="#contact" class="btn-line">Start an Enquiry</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="stat-num">5+</div><div class="stat-lbl">Years Trading</div></div>
+      <div class="hero-stat"><div class="stat-num">3</div><div class="stat-lbl">Global Entities</div></div>
+      <div class="hero-stat"><div class="stat-num">B2B</div><div class="stat-lbl">Wholesale Focus</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-card">
+      <div class="hero-card-head">
+        <div class="hero-card-title">Our Group Entities</div>
+        <div class="hero-card-badge">Active</div>
+      </div>
+      <div class="entity-list">
+        <div class="entity-row">
+          <div class="entity-flag">🇦🇪</div>
+          <div class="entity-info">
+            <div class="entity-name">Pearl Imperial General Trading LLC</div>
+            <div class="entity-loc">Dubai, United Arab Emirates · Headquarters</div>
+          </div>
+        </div>
+        <div class="entity-row">
+          <div class="entity-flag">🇰🇼</div>
+          <div class="entity-info">
+            <div class="entity-name">Pearl Imperial International</div>
+            <div class="entity-loc">Farwaniya, Kuwait · Regional Office</div>
+          </div>
+        </div>
+        <div class="entity-row">
+          <div class="entity-flag">🇮🇳</div>
+          <div class="entity-info">
+            <div class="entity-name">Pearl Imperial International LLP</div>
+            <div class="entity-loc">Kerala, India · South Asia Operations</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-products">
+      <div class="hero-prod-title">Product Categories</div>
+      <div class="prod-tags">
+        <div class="prod-tag">Premium Nuts</div>
+        <div class="prod-tag">Dry Fruits</div>
+        <div class="prod-tag">Spices</div>
+        <div class="prod-tag">Basmati Rice</div>
+        <div class="prod-tag">Specialty Coffee</div>
+        <div class="prod-tag">B2B Wholesale</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="m-item">Premium Nuts</span><span class="m-dot">·</span>
+    <span class="m-item">Dry Fruits</span><span class="m-dot">·</span>
+    <span class="m-item">Aromatic Spices</span><span class="m-dot">·</span>
+    <span class="m-item">Basmati Rice</span><span class="m-dot">·</span>
+    <span class="m-item">Specialty Coffee</span><span class="m-dot">·</span>
+    <span class="m-item">Dubai · Kuwait · India</span><span class="m-dot">·</span>
+    <span class="m-item">B2B Wholesale</span><span class="m-dot">·</span>
+    <span class="m-item">Ethical Sourcing</span><span class="m-dot">·</span>
+    <span class="m-item">Global Distribution</span><span class="m-dot">·</span>
+    <span class="m-item">Premium Nuts</span><span class="m-dot">·</span>
+    <span class="m-item">Dry Fruits</span><span class="m-dot">·</span>
+    <span class="m-item">Aromatic Spices</span><span class="m-dot">·</span>
+    <span class="m-item">Basmati Rice</span><span class="m-dot">·</span>
+    <span class="m-item">Specialty Coffee</span><span class="m-dot">·</span>
+    <span class="m-item">Dubai · Kuwait · India</span><span class="m-dot">·</span>
+    <span class="m-item">B2B Wholesale</span><span class="m-dot">·</span>
+    <span class="m-item">Ethical Sourcing</span><span class="m-dot">·</span>
+    <span class="m-item">Global Distribution</span><span class="m-dot">·</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div>
+    <span class="sec-tag">Who We Are</span>
+    <h2 class="sec-title">Connecting global markets with <em>precision</em> and <strong>purpose</strong></h2>
+    <div class="sec-body about-body">
+      <p>Pearl Imperial General Trading LLC is a Dubai-based international trading company specialising in the procurement, import, and export of premium food commodities across the Gulf, Middle East, and South Asia.</p>
+      <p>Founded in 2020, the Pearl Imperial Group has grown into a multi-entity operation spanning the UAE, Kuwait, and India — building direct trade channels between quality producers and trusted buyers across the region.</p>
+      <p>We are actively seeking B2B wholesale partners, distributors, and long-term supply agreements across all product categories.</p>
+    </div>
+    <a href="#contact" class="btn-blue">Partner With Us</a>
+  </div>
+  <div>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon"><span>Q</span></div>
+        <div>
+          <div class="pillar-name">Quality Assurance</div>
+          <div class="pillar-desc">Every product meets rigorous standards before reaching our buyers — sourced directly from verified producers.</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon"><span>E</span></div>
+        <div>
+          <div class="pillar-name">Ethical Sourcing</div>
+          <div class="pillar-desc">Responsible procurement and long-term relationships with producers who share our values.</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon"><span>S</span></div>
+        <div>
+          <div class="pillar-name">Consistent Supply</div>
+          <div class="pillar-desc">Reliable, on-time delivery so our partners can plan and operate with confidence.</div>
+        </div>
+      </div>
+    </div>
+    <div class="presence">
+      <div class="pres-item"><div class="pres-flag">🇦🇪</div><div class="pres-name">Dubai, UAE</div><div class="pres-role">Headquarters</div></div>
+      <div class="pres-item"><div class="pres-flag">🇰🇼</div><div class="pres-name">Kuwait</div><div class="pres-role">Regional Office</div></div>
+      <div class="pres-item"><div class="pres-flag">🇮🇳</div><div class="pres-name">Kerala, India</div><div class="pres-role">South Asia</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <div class="products-inner">
+    <div class="prod-head">
+      <div>
+        <span class="sec-tag">What We Trade</span>
+        <h2 class="sec-title" style="margin-bottom:0">Premium commodities,<br/><em>sourced globally</em></h2>
+      </div>
+      <a href="#contact" class="btn-line">Request Price List</a>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="prod-num">01</div>
+        <div class="prod-name">Premium Nuts</div>
+        <div class="prod-origin">USA · Turkey · Iran · India</div>
+        <div class="prod-desc">Almonds, cashews, pistachios, walnuts, macadamia — bulk wholesale quantities from leading growing regions worldwide.</div>
+        <div class="prod-pill">Wholesale Available</div>
+      </div>
+      <div class="product-card">
+        <div class="prod-num">02</div>
+        <div class="prod-name">Dry Fruits</div>
+        <div class="prod-origin">Afghanistan · Iran · Turkey</div>
+        <div class="prod-desc">Raisins, dates, apricots, figs, prunes — premium quality for retail chains, food service operators, and regional distributors.</div>
+        <div class="prod-pill">B2B Supply</div>
+      </div>
+      <div class="product-card">
+        <div class="prod-num">03</div>
+        <div class="prod-name">Aromatic Spices</div>
+        <div class="prod-origin">India · Sri Lanka · Vietnam</div>
+        <div class="prod-desc">Turmeric, cardamom, black pepper, cinnamon, cloves — for restaurants, food manufacturers, and retail chains across the Gulf.</div>
+        <div class="prod-pill">Custom Blends</div>
+      </div>
+      <div class="product-card">
+        <div class="prod-num">04</div>
+        <div class="prod-name">Basmati Rice</div>
+        <div class="prod-origin">India · Pakistan</div>
+        <div class="prod-desc">Long-grain aged basmati in everyday to premium export grades — 5kg to 50kg sack options for all buyer types.</div>
+        <div class="prod-pill">Export Grade</div>
+      </div>
+      <div class="product-card">
+        <div class="prod-num">05</div>
+        <div class="prod-name">Specialty Coffee</div>
+        <div class="prod-origin">Ethiopia · Yemen · India</div>
+        <div class="prod-desc">Single-origin and blended beans for roasters, cafés, and hospitality groups. Green and roasted available on request.</div>
+        <div class="prod-pill">Single Origin</div>
+      </div>
+      <div class="product-card" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:var(--blue-light);border-bottom:2px solid var(--blue);">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:1.2rem;font-style:italic;line-height:1.4;">Looking for a specific product or custom sourcing?</div>
+        <a href="#contact" class="btn-blue" style="font-size:0.72rem;">Send an Enquiry</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section id="how" class="how">
+  <span class="sec-tag">How We Work</span>
+  <h2 class="sec-title">Built for <em>serious</em> trade partners</h2>
+  <div class="how-grid">
+    <div class="how-card">
+      <div class="how-num">01</div>
+      <div class="how-title">Import & Procurement</div>
+      <div class="how-body">We source directly from producers in India, Turkey, Afghanistan, USA, and East Africa — negotiating volume pricing and verifying quality at origin before shipment.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">02</div>
+      <div class="how-title">Export & Distribution</div>
+      <div class="how-body">From our Dubai base, we export to retailers, supermarkets, wholesalers, and food service operators across the Gulf and wider Middle East.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">03</div>
+      <div class="how-title">B2B Wholesale</div>
+      <div class="how-body">We supply businesses — not retail consumers. Flexible MOQs and competitive pricing for distributors, manufacturers, and chain buyers.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">04</div>
+      <div class="how-title">Trade Partnerships</div>
+      <div class="how-body">Actively seeking long-term alliances, regional distribution agreements, and B2B supply partnerships across all categories and markets.</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETS -->
+<section id="markets" class="markets">
+  <div class="markets-inner">
+    <span class="sec-tag">Where We Operate</span>
+    <h2 class="sec-title">Active across <em>three regions</em></h2>
+    <div class="markets-row">
+      <div class="mkt-item"><div class="mkt-name">Dubai</div><div class="mkt-role">Headquarters · UAE</div></div>
+      <div class="mkt-item"><div class="mkt-name">Kuwait</div><div class="mkt-role">Regional Office</div></div>
+      <div class="mkt-item"><div class="mkt-name">Kerala</div><div class="mkt-role">India Operations</div></div>
+      <div class="mkt-item"><div class="mkt-name">Gulf Region</div><div class="mkt-role">Export Markets</div></div>
+      <div class="mkt-item"><div class="mkt-name">South Asia</div><div class="mkt-role">Sourcing & Supply</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="contact-inner">
+    <div>
+      <span class="sec-tag">Get In Touch</span>
+      <h2 class="sec-title">Ready to <em>start trading?</em></h2>
+      <p class="sec-body" style="margin-bottom:3rem;">Whether you need a reliable supplier, a distribution partner, or a B2B alliance — send us your requirements and we'll respond within 24 hours.</p>
+      <div class="contact-info">
+        <div class="cinfo-item">
+          <div class="cinfo-label">Headquarters</div>
+          <div class="cinfo-val">Pearl Imperial General Trading LLC<br/>778V+MJJ, Al Ras<br/>Dubai, United Arab Emirates</div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-label">Phone / WhatsApp</div>
+          <div class="cinfo-val"><a href="tel:+97145477741">+971 4 547 7741</a></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-label">Group Entities</div>
+          <div class="cinfo-val">
+            <div class="entity-chips">
+              <div class="entity-chip"><div class="entity-chip-dot"></div>Pearl Imperial General Trading LLC — Dubai, UAE</div>
+              <div class="entity-chip"><div class="entity-chip-dot"></div>Pearl Imperial International — Kuwait</div>
+              <div class="entity-chip"><div class="entity-chip-dot"></div>Pearl Imperial International LLP — Kerala, India</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cform">
+      <div class="cform-title">Trade Enquiry Form</div>
+      <div class="frow">
+        <div class="fg"><label>Full Name</label><input type="text" placeholder="Your name"/></div>
+        <div class="fg"><label>Company</label><input type="text" placeholder="Company name"/></div>
+      </div>
+      <div class="frow">
+        <div class="fg"><label>Email</label><input type="email" placeholder="you@company.com"/></div>
+        <div class="fg"><label>Phone / WhatsApp</label><input type="tel" placeholder="+971 ..."/></div>
+      </div>
+      <div class="fg">
+        <label>Product Interest</label>
+        <select>
+          <option>Premium Nuts</option>
+          <option>Dry Fruits</option>
+          <option>Aromatic Spices</option>
+          <option>Basmati Rice</option>
+          <option>Specialty Coffee</option>
+          <option>Multiple Products</option>
+          <option>Distribution Partnership</option>
+          <option>Other / Custom</option>
+        </select>
+      </div>
+      <div class="fg"><label>Country / Region</label><input type="text" placeholder="UAE, Kuwait, India, Other..."/></div>
+      <div class="fg"><label>Message</label><textarea placeholder="Describe your requirements — quantities, grades, supply frequency..."></textarea></div>
+      <button class="fsub" onclick="submitForm()">Send Trade Enquiry</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">Pearl Imperial General Trading LLC<span>Dubai, UAE · Est. 2020</span></div>
+    <div class="foot-links">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#how">Operations</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="foot-copy">© 2025 Pearl Imperial General Trading LLC · Built by BuildStack.io</div>
+  </div>
+</footer>
+
+<script>
+function submitForm(){
+  const name=document.querySelector('input[placeholder="Your name"]').value||'Not provided';
+  const company=document.querySelector('input[placeholder="Company name"]').value||'Not provided';
+  const phone=document.querySelector('input[placeholder="+971 ..."]').value||'Not provided';
+  const product=document.querySelector('select').value;
+  const msg=`Trade Enquiry — Pearl Imperial%0A%0AName: ${name}%0ACompany: ${company}%0APhone: ${phone}%0AProduct Interest: ${product}`;
+  window.open(`https://wa.me/97145477741?text=${msg}`,'_blank');
+}
+</script>
+</body>
+</html>
